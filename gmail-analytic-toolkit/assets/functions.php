@@ -3,21 +3,14 @@ require_once 'autoload.php';
 login_check();
 
 function get_email_info(){
-    
-    $client = new Google_Client();
-    $client->setAuthConfigFile('client_secret.json');
-    $client->addScope('https://www.googleapis.com/auth/gmail.readonly');
-    
-    $client->setAccessToken($_SESSION['access_token']);
-    $gmail_service = new Google_Service_Gmail($client);
-    
+        
 }
 
 function login_check()
 {
-    $client = getClient();
-    //$client->setAuthConfigFile('client_secret.json');
-    //$client->addScope('https://www.googleapis.com/auth/gmail.readonly');
+    $client = new Google_Client();
+    $client->setAuthConfigFile('client_secret.json');
+    $client->addScope('https://www.googleapis.com/auth/gmail.readonly');
     
     if (isset($_SESSION['access_token']) && $_SESSION['access_token']) {
         if ($client->isAccessTokenExpired()){
