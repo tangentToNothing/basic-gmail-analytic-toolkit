@@ -1,4 +1,12 @@
 <?php
+/*
+ * oauth2callback.php is designed to get an authorization code from the google sign in service
+ * by sending the user to the Authroization URL from google containing the sign in service.
+ * 
+ * A GET request retrieves the authorization code from which the client extracts an access token; and stores 
+ * said token in a session variable
+ */
+
 require_once 'autoload.php';
 
 

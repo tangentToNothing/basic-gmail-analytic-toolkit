@@ -2,11 +2,7 @@
 require_once 'autoload.php';
 
 session_start();
-/*
-$client = new Google_Client();
-$client->setAuthConfigFile('client_secret.json');
-$client->addScope('https://www.googleapis.com/auth/gmail.readonly');
-*/
+
 /*
  * 
  * trying to be a better commenter.
